@@ -1,7 +1,8 @@
 from calendar import c
 from tkinter import *
 import random
-
+ #from numpy import true_divide
+# from sklearn.preprocessing import PolynomialFeatures
 
 canvas_width = 900
 canvas_height = 900
@@ -25,14 +26,14 @@ master.title("Līnijas spēle")
 logs.pack()
 
 #Fona attēla iestatīšana... (svarīgs izmērs - der PNG) (FONS ir globāls mainīgais)
-fons = PhotoImage(file="Felikss\mezs_sss.png")
+fons = PhotoImage(file="Felikss\mezs_sss.ppm")
 
 
 #Izveidojam spēlētāju (bilde (globāls mainīgais))
-sarkG = PhotoImage(file="Felikss\sarkvideja.ppm")
+sarkG = PhotoImage(file="Felikss\playerbilde.ppm")
 
 # SĒNES (Globāls mainīgais)
-sene = PhotoImage(file="Felikss\semene.ppm") 
+sene = PhotoImage(file="Felikss\okok.ppm") 
 
 # UZTAISĪT sēnes (mainot masīva izmēru var veidot vairāk sēnes (arī globāls mainīgais))!!!!
 xkoordinates = []
@@ -128,7 +129,7 @@ def nospiests(none):
     print("nospiests")
     logs.delete("all")
     global xkoordinates, ykoordinates, senes, senesst,sene, fons, sarkG
-    logs.create_image(0,0, image=fons)
+    logs.create_image(450,450, image=fons)
     xkoordinates.clear()
     ykoordinates.clear()
     senes.clear()
